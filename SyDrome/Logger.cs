@@ -14,7 +14,7 @@ namespace SyDrome
             try
             {
                 Stream stream;
-                using (stream = File.Open("Log.log", FileMode.OpenOrCreate, FileAccess.Write))
+                using (stream = File.Open("Log.log", FileMode.Append, FileAccess.Write))
                 {
                     StreamWriter writer = new StreamWriter(stream);
                     writer.WriteLine("[" + DateTime.Now + "]" + "[" + power + "]" + messege);
